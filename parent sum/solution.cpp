@@ -18,7 +18,6 @@ int main(){
         return 1;
     }
     else if(pid == 0){
-        // child process
         bool isPrime = true;
         if(sum <= 1) isPrime = false;
         for(int i = 2; i <= sqrt(sum); i++){
@@ -31,8 +30,9 @@ int main(){
         else cout << "The sum is not prime." << endl;
     }
     else{
-        // parent process
         wait(NULL);
     }
     return 0;
 }
+
+// wacp to create input.txt in parent process and write your name university rol no and class roll no in it and then read same file in child process and print the content pass the file name in pipe or we can say runtime.
